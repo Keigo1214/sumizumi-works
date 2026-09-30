@@ -1,0 +1,1659 @@
+{
+ "fetched_at": "2026-09-30T21:50:03",
+ "rows": [
+  {
+   "product": "POSレジ",
+   "industry": "飲食店",
+   "query": "飲食店 POSレジ",
+   "hit": true,
+   "intent": [
+    "飲食店 posレジ ランキング",
+    "飲食店 posレジおすすめ",
+    "飲食店 posレジ 比較"
+   ],
+   "suggestions": [
+    "飲食店 posレジ ランキング",
+    "飲食店 posレジおすすめ",
+    "飲食店 posレジ 比較",
+    "飲食店 posレジ メリット",
+    "posレジ 使い方 飲食店"
+   ]
+  },
+  {
+   "product": "POSレジ",
+   "industry": "居酒屋",
+   "query": "居酒屋 POSレジ",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "居酒屋 posレジ"
+   ]
+  },
+  {
+   "product": "POSレジ",
+   "industry": "カフェ",
+   "query": "カフェ POSレジ",
+   "hit": true,
+   "intent": [
+    "カフェ posレジ おすすめ"
+   ],
+   "suggestions": [
+    "カフェ pos レジ",
+    "カフェ posレジ おすすめ"
+   ]
+  },
+  {
+   "product": "POSレジ",
+   "industry": "美容室",
+   "query": "美容室 POSレジ",
+   "hit": true,
+   "intent": [
+    "美容室 posレジ 無料",
+    "美容室 pos レジ おすすめ",
+    "美容室 posレジ 比較"
+   ],
+   "suggestions": [
+    "美容室 posレジ",
+    "美容室 posレジ 無料",
+    "美容室 pos レジ おすすめ",
+    "美容室 posレジ 比較"
+   ]
+  },
+  {
+   "product": "POSレジ",
+   "industry": "ネイルサロン",
+   "query": "ネイルサロン POSレジ",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "ネイルサロン posレジ"
+   ]
+  },
+  {
+   "product": "POSレジ",
+   "industry": "エステ",
+   "query": "エステ POSレジ",
+   "hit": false,
+   "intent": [],
+   "suggestions": [
+    "エステ pos レジ"
+   ]
+  },
+  {
+   "product": "POSレジ",
+   "industry": "整体",
+   "query": "整体 POSレジ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "POSレジ",
+   "industry": "歯科",
+   "query": "歯科 POSレジ",
+   "hit": false,
+   "intent": [],
+   "suggestions": [
+    "pos レジ 歯科"
+   ]
+  },
+  {
+   "product": "POSレジ",
+   "industry": "クリニック",
+   "query": "クリニック POSレジ",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "クリニック posレジ"
+   ]
+  },
+  {
+   "product": "POSレジ",
+   "industry": "小売店",
+   "query": "小売店 POSレジ",
+   "hit": true,
+   "intent": [
+    "小売店 pos レジ おすすめ",
+    "小売店 posレジ 比較"
+   ],
+   "suggestions": [
+    "小売店 posレジ",
+    "小売店 pos レジ おすすめ",
+    "小売店 posレジ 比較"
+   ]
+  },
+  {
+   "product": "POSレジ",
+   "industry": "アパレル",
+   "query": "アパレル POSレジ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "POSレジ",
+   "industry": "学習塾",
+   "query": "学習塾 POSレジ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "POSレジ",
+   "industry": "ジム",
+   "query": "ジム POSレジ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "POSレジ",
+   "industry": "不動産",
+   "query": "不動産 POSレジ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "POSレジ",
+   "industry": "建設業",
+   "query": "建設業 POSレジ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "POSレジ",
+   "industry": "税理士",
+   "query": "税理士 POSレジ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "POSレジ",
+   "industry": "介護",
+   "query": "介護 POSレジ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "POSレジ",
+   "industry": "ホテル",
+   "query": "ホテル POSレジ",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "ホテル posレジ"
+   ]
+  },
+  {
+   "product": "予約システム",
+   "industry": "飲食店",
+   "query": "飲食店 予約システム",
+   "hit": true,
+   "intent": [
+    "飲食店 予約システム 無料",
+    "飲食店 予約システム 比較",
+    "飲食店 予約システム おすすめ"
+   ],
+   "suggestions": [
+    "飲食店 予約システム",
+    "飲食店 予約システム 無料",
+    "飲食店 予約システム 比較",
+    "飲食店 予約システム おすすめ",
+    "飲食店 予約システム line",
+    "飲食店 予約システム アプリ",
+    "飲食店 予約システム 自作",
+    "google 予約システム 飲食店",
+    "ライン 予約システム 飲食店",
+    "公式line 予約システム 飲食店"
+   ]
+  },
+  {
+   "product": "予約システム",
+   "industry": "居酒屋",
+   "query": "居酒屋 予約システム",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "居酒屋 予約システム"
+   ]
+  },
+  {
+   "product": "予約システム",
+   "industry": "カフェ",
+   "query": "カフェ 予約システム",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "カフェ 予約システム"
+   ]
+  },
+  {
+   "product": "予約システム",
+   "industry": "美容室",
+   "query": "美容室 予約システム",
+   "hit": true,
+   "intent": [
+    "美容室 予約システム 無料",
+    "美容室 予約システム おすすめ",
+    "美容室 予約システム 比較"
+   ],
+   "suggestions": [
+    "美容室 予約システム",
+    "美容室 予約システム 無料",
+    "美容室 予約システム おすすめ",
+    "美容室 予約システム line",
+    "美容室 予約システム 比較",
+    "美容室 予約システム アプリ",
+    "ライン 予約システム 美容室"
+   ]
+  },
+  {
+   "product": "予約システム",
+   "industry": "ネイルサロン",
+   "query": "ネイルサロン 予約システム",
+   "hit": true,
+   "intent": [
+    "ネイルサロン 予約システム 無料",
+    "ネイルサロン 予約システム おすすめ"
+   ],
+   "suggestions": [
+    "ネイルサロン 予約システム",
+    "ネイルサロン 予約システム 無料",
+    "ネイルサロン 予約システム おすすめ",
+    "line 予約システム ネイルサロン"
+   ]
+  },
+  {
+   "product": "予約システム",
+   "industry": "エステ",
+   "query": "エステ 予約システム",
+   "hit": true,
+   "intent": [
+    "エステ 予約システム 無料"
+   ],
+   "suggestions": [
+    "エステ 予約システム",
+    "エステ 予約システム 無料"
+   ]
+  },
+  {
+   "product": "予約システム",
+   "industry": "整体",
+   "query": "整体 予約システム",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "予約システム",
+   "industry": "歯科",
+   "query": "歯科 予約システム",
+   "hit": true,
+   "intent": [
+    "歯科 予約システム ランキング",
+    "歯科 予約システム 無料",
+    "歯科 予約システム おすすめ",
+    "歯科 予約システム 比較"
+   ],
+   "suggestions": [
+    "歯科 予約システム",
+    "歯科 予約システム ランキング",
+    "歯科 予約システム genifix",
+    "歯科 予約システム line",
+    "歯科 予約システム 無料",
+    "歯科 予約システム おすすめ",
+    "歯科 予約システム デンタ マップ プラス",
+    "歯科 予約システム 比較",
+    "歯科 予約システム genifix line",
+    "歯科 予約システム cm"
+   ]
+  },
+  {
+   "product": "予約システム",
+   "industry": "クリニック",
+   "query": "クリニック 予約システム",
+   "hit": true,
+   "intent": [
+    "クリニック 予約システム 比較",
+    "クリニック 予約システム 料金",
+    "クリニック 予約システム ランキング"
+   ],
+   "suggestions": [
+    "クリニック 予約システム",
+    "クリニック 予約システム 比較",
+    "クリニック 予約システム 料金",
+    "クリニック 予約システム ランキング",
+    "クリニック 予約システム シェア"
+   ]
+  },
+  {
+   "product": "予約システム",
+   "industry": "小売店",
+   "query": "小売店 予約システム",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "予約システム",
+   "industry": "アパレル",
+   "query": "アパレル 予約システム",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "予約システム",
+   "industry": "学習塾",
+   "query": "学習塾 予約システム",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "学習塾 予約システム"
+   ]
+  },
+  {
+   "product": "予約システム",
+   "industry": "ジム",
+   "query": "ジム 予約システム",
+   "hit": true,
+   "intent": [
+    "ジム 予約システム 比較"
+   ],
+   "suggestions": [
+    "ジム 予約システム",
+    "ジム 予約システム 比較"
+   ]
+  },
+  {
+   "product": "予約システム",
+   "industry": "不動産",
+   "query": "不動産 予約システム",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "予約システム",
+   "industry": "建設業",
+   "query": "建設業 予約システム",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "予約システム",
+   "industry": "税理士",
+   "query": "税理士 予約システム",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "予約システム",
+   "industry": "介護",
+   "query": "介護 予約システム",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "予約システム",
+   "industry": "ホテル",
+   "query": "ホテル 予約システム",
+   "hit": true,
+   "intent": [
+    "ホテル 予約システム 比較"
+   ],
+   "suggestions": [
+    "ホテル 予約システム",
+    "ホテル 予約システム 比較",
+    "ホテル 予約システム 仕組み",
+    "ホテル 予約システム pms"
+   ]
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "飲食店",
+   "query": "飲食店 キャッシュレス決済",
+   "hit": true,
+   "intent": [
+    "飲食店 キャッシュレス決済 おすすめ"
+   ],
+   "suggestions": [
+    "飲食店 キャッシュレス決済",
+    "飲食店 キャッシュレス決済 おすすめ",
+    "飲食店 キャッシュレス決済 手数料",
+    "飲食店 キャッシュレス決済比率",
+    "飲食店 キャッシュレス決済 導入",
+    "飲食店 キャッシュレス決済 割合",
+    "秋田市 飲食店 キャッシュレス決済",
+    "秋田 飲食店 キャッシュレス決済"
+   ]
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "居酒屋",
+   "query": "居酒屋 キャッシュレス決済",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "居酒屋 キャッシュレス決済"
+   ]
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "カフェ",
+   "query": "カフェ キャッシュレス決済",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "カフェ キャッシュレス決済"
+   ]
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "美容室",
+   "query": "美容室 キャッシュレス決済",
+   "hit": true,
+   "intent": [
+    "美容室 キャッシュレス決済おすすめ"
+   ],
+   "suggestions": [
+    "美容室 キャッシュレス決済",
+    "美容室 キャッシュレス決済おすすめ"
+   ]
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "ネイルサロン",
+   "query": "ネイルサロン キャッシュレス決済",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "ネイルサロン キャッシュレス決済"
+   ]
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "エステ",
+   "query": "エステ キャッシュレス決済",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "エステ キャッシュレス決済"
+   ]
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "整体",
+   "query": "整体 キャッシュレス決済",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "歯科",
+   "query": "歯科 キャッシュレス決済",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "歯科 キャッシュレス決済"
+   ]
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "クリニック",
+   "query": "クリニック キャッシュレス決済",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "クリニック キャッシュレス決済",
+    "クリニック キャッシュレス決済 手数料",
+    "厚生 労働省 クリニック キャッシュレス決済",
+    "キャッシュレス決済端末 クリニック",
+    "キャッシュレス決済 導入 クリニック"
+   ]
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "小売店",
+   "query": "小売店 キャッシュレス決済",
+   "hit": false,
+   "intent": [],
+   "suggestions": [
+    "キャッシュレス決済 小売店"
+   ]
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "アパレル",
+   "query": "アパレル キャッシュレス決済",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "学習塾",
+   "query": "学習塾 キャッシュレス決済",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "ジム",
+   "query": "ジム キャッシュレス決済",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "不動産",
+   "query": "不動産 キャッシュレス決済",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "不動産 キャッシュレス決済"
+   ]
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "建設業",
+   "query": "建設業 キャッシュレス決済",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "建設業 キャッシュレス決済"
+   ]
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "税理士",
+   "query": "税理士 キャッシュレス決済",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "介護",
+   "query": "介護 キャッシュレス決済",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "キャッシュレス決済",
+   "industry": "ホテル",
+   "query": "ホテル キャッシュレス決済",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "ホテル キャッシュレス決済"
+   ]
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "飲食店",
+   "query": "飲食店 クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "居酒屋",
+   "query": "居酒屋 クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "カフェ",
+   "query": "カフェ クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "美容室",
+   "query": "美容室 クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "ネイルサロン",
+   "query": "ネイルサロン クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "エステ",
+   "query": "エステ クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "整体",
+   "query": "整体 クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "歯科",
+   "query": "歯科 クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "クリニック",
+   "query": "クリニック クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": [
+    "クラウドpbx クリニック"
+   ]
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "小売店",
+   "query": "小売店 クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "アパレル",
+   "query": "アパレル クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "学習塾",
+   "query": "学習塾 クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "ジム",
+   "query": "ジム クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "不動産",
+   "query": "不動産 クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "建設業",
+   "query": "建設業 クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "税理士",
+   "query": "税理士 クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "介護",
+   "query": "介護 クラウドPBX",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "クラウドPBX",
+   "industry": "ホテル",
+   "query": "ホテル クラウドPBX",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "ホテル クラウドpbx"
+   ]
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "飲食店",
+   "query": "飲食店 ネットショップ",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "飲食店 ネットショップ"
+   ]
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "居酒屋",
+   "query": "居酒屋 ネットショップ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "カフェ",
+   "query": "カフェ ネットショップ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "美容室",
+   "query": "美容室 ネットショップ",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "美容室 ネットショップ"
+   ]
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "ネイルサロン",
+   "query": "ネイルサロン ネットショップ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "エステ",
+   "query": "エステ ネットショップ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "整体",
+   "query": "整体 ネットショップ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "歯科",
+   "query": "歯科 ネットショップ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "クリニック",
+   "query": "クリニック ネットショップ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "小売店",
+   "query": "小売店 ネットショップ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "アパレル",
+   "query": "アパレル ネットショップ",
+   "hit": true,
+   "intent": [
+    "アパレル ネットショップ ランキング",
+    "アパレル ネットショップ おすすめ"
+   ],
+   "suggestions": [
+    "アパレル ネットショップ",
+    "アパレル ネットショップ ランキング",
+    "アパレル ネットショップ 開業資金",
+    "アパレル ネットショップ 儲かる",
+    "アパレル ネットショップ 仕入れ",
+    "アパレル ネットショップ 開設",
+    "アパレル ネットショップ 求人",
+    "アパレル ネットショップ 開業",
+    "アパレル ネットショップ 人気",
+    "アパレル ネットショップ おすすめ"
+   ]
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "学習塾",
+   "query": "学習塾 ネットショップ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "ジム",
+   "query": "ジム ネットショップ",
+   "hit": false,
+   "intent": [],
+   "suggestions": [
+    "ネットショップ 事務",
+    "ネットショップ 事務 求人",
+    "ネットショップ 事務 大変",
+    "ネットショップ 事務 仕事内容"
+   ]
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "不動産",
+   "query": "不動産 ネットショップ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "建設業",
+   "query": "建設業 ネットショップ",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "税理士",
+   "query": "税理士 ネットショップ",
+   "hit": false,
+   "intent": [],
+   "suggestions": [
+    "ネットショップ 税理士",
+    "ネットショップに強い 税理士"
+   ]
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "介護",
+   "query": "介護 ネットショップ",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "介護 ネットショップ"
+   ]
+  },
+  {
+   "product": "ネットショップ",
+   "industry": "ホテル",
+   "query": "ホテル ネットショップ",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "ホテル ネットショップ"
+   ]
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "飲食店",
+   "query": "飲食店 バーチャルオフィス",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "居酒屋",
+   "query": "居酒屋 バーチャルオフィス",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "カフェ",
+   "query": "カフェ バーチャルオフィス",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "美容室",
+   "query": "美容室 バーチャルオフィス",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "ネイルサロン",
+   "query": "ネイルサロン バーチャルオフィス",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "エステ",
+   "query": "エステ バーチャルオフィス",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "整体",
+   "query": "整体 バーチャルオフィス",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "歯科",
+   "query": "歯科 バーチャルオフィス",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "クリニック",
+   "query": "クリニック バーチャルオフィス",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "小売店",
+   "query": "小売店 バーチャルオフィス",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "アパレル",
+   "query": "アパレル バーチャルオフィス",
+   "hit": false,
+   "intent": [],
+   "suggestions": [
+    "バーチャルオフィス アパレル"
+   ]
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "学習塾",
+   "query": "学習塾 バーチャルオフィス",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "ジム",
+   "query": "ジム バーチャルオフィス",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "不動産",
+   "query": "不動産 バーチャルオフィス",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "不動産 バーチャルオフィス"
+   ]
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "建設業",
+   "query": "建設業 バーチャルオフィス",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "建設業 バーチャルオフィス"
+   ]
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "税理士",
+   "query": "税理士 バーチャルオフィス",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "税理士 バーチャルオフィス"
+   ]
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "介護",
+   "query": "介護 バーチャルオフィス",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "バーチャルオフィス",
+   "industry": "ホテル",
+   "query": "ホテル バーチャルオフィス",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "顧客管理",
+   "industry": "飲食店",
+   "query": "飲食店 顧客管理",
+   "hit": true,
+   "intent": [
+    "飲食店 顧客管理アプリ 無料",
+    "飲食店 顧客管理 無料"
+   ],
+   "suggestions": [
+    "飲食店 顧客管理アプリ 無料",
+    "飲食店 顧客管理 アプリ",
+    "飲食店 顧客管理 エクセル",
+    "飲食店 顧客管理システム",
+    "飲食店 顧客管理 無料"
+   ]
+  },
+  {
+   "product": "顧客管理",
+   "industry": "居酒屋",
+   "query": "居酒屋 顧客管理",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "顧客管理",
+   "industry": "カフェ",
+   "query": "カフェ 顧客管理",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "顧客管理",
+   "industry": "美容室",
+   "query": "美容室 顧客管理",
+   "hit": true,
+   "intent": [
+    "美容室 顧客管理ソフト 無料",
+    "美容室 顧客管理ソフト ランキング",
+    "美容室 顧客管理アプリ 無料"
+   ],
+   "suggestions": [
+    "美容室 顧客管理ソフト 無料",
+    "美容室 顧客管理",
+    "美容室 顧客管理ソフト",
+    "美容室 顧客管理ソフト ランキング",
+    "美容室 顧客管理アプリ 無料"
+   ]
+  },
+  {
+   "product": "顧客管理",
+   "industry": "ネイルサロン",
+   "query": "ネイルサロン 顧客管理",
+   "hit": true,
+   "intent": [
+    "ネイルサロン 顧客管理 無料"
+   ],
+   "suggestions": [
+    "ネイルサロン 顧客管理 アプリ",
+    "ネイルサロン 顧客管理",
+    "ネイルサロン 顧客管理 無料"
+   ]
+  },
+  {
+   "product": "顧客管理",
+   "industry": "エステ",
+   "query": "エステ 顧客管理",
+   "hit": true,
+   "intent": [
+    "エステ 顧客管理アプリ 無料"
+   ],
+   "suggestions": [
+    "エステ 顧客管理アプリ 無料",
+    "エステ 顧客管理",
+    "エステ 顧客管理 アプリ",
+    "エステ 顧客管理 エクセル",
+    "エステ 顧客管理システム"
+   ]
+  },
+  {
+   "product": "顧客管理",
+   "industry": "整体",
+   "query": "整体 顧客管理",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "整体 顧客管理",
+    "整体 顧客管理ソフト フリー",
+    "整体 顧客管理システム"
+   ]
+  },
+  {
+   "product": "顧客管理",
+   "industry": "歯科",
+   "query": "歯科 顧客管理",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "顧客管理",
+   "industry": "クリニック",
+   "query": "クリニック 顧客管理",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "クリニック 顧客管理"
+   ]
+  },
+  {
+   "product": "顧客管理",
+   "industry": "小売店",
+   "query": "小売店 顧客管理",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "小売店 顧客管理システム",
+    "小売店 顧客管理"
+   ]
+  },
+  {
+   "product": "顧客管理",
+   "industry": "アパレル",
+   "query": "アパレル 顧客管理",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "アパレル 顧客管理ノート",
+    "アパレル 顧客管理",
+    "アパレル 顧客管理 アプリ",
+    "アパレル 顧客管理 エクセル",
+    "アパレル 顧客管理とは"
+   ]
+  },
+  {
+   "product": "顧客管理",
+   "industry": "学習塾",
+   "query": "学習塾 顧客管理",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "顧客管理",
+   "industry": "ジム",
+   "query": "ジム 顧客管理",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "ジム 顧客管理システム",
+    "ジム 顧客管理",
+    "顧客管理 事務"
+   ]
+  },
+  {
+   "product": "顧客管理",
+   "industry": "不動産",
+   "query": "不動産 顧客管理",
+   "hit": true,
+   "intent": [
+    "不動産 顧客管理ソフト 無料",
+    "不動産顧客管理無料"
+   ],
+   "suggestions": [
+    "不動産 顧客管理",
+    "不動産 顧客管理システム",
+    "不動産 顧客管理エクセル",
+    "不動産 顧客管理 エクセル テンプレート",
+    "不動産 顧客管理ソフト 無料",
+    "不動産 顧客管理ソフト",
+    "不動産 顧客管理 アプリ",
+    "不動産顧客管理無料",
+    "不動産 顧客管理ツール"
+   ]
+  },
+  {
+   "product": "顧客管理",
+   "industry": "建設業",
+   "query": "建設業 顧客管理",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "建設業 顧客管理システム"
+   ]
+  },
+  {
+   "product": "顧客管理",
+   "industry": "税理士",
+   "query": "税理士 顧客管理",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "税理士 顧客管理システム",
+    "顧客管理 税理士"
+   ]
+  },
+  {
+   "product": "顧客管理",
+   "industry": "介護",
+   "query": "介護 顧客管理",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "介護 顧客管理システム"
+   ]
+  },
+  {
+   "product": "顧客管理",
+   "industry": "ホテル",
+   "query": "ホテル 顧客管理",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "ホテル 顧客管理",
+    "ホテル 顧客管理システム",
+    "ホテル 顧客管理 ソフト"
+   ]
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "飲食店",
+   "query": "飲食店 ホームページ作成",
+   "hit": true,
+   "intent": [
+    "飲食店 ホームページ作成 無料",
+    "ホームページ作成 費用 飲食店"
+   ],
+   "suggestions": [
+    "飲食店 ホームページ作成",
+    "飲食店 ホームページ作成 相場",
+    "飲食店 ホームページ作成 無料",
+    "ホームページ作成 費用 飲食店"
+   ]
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "居酒屋",
+   "query": "居酒屋 ホームページ作成",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "カフェ",
+   "query": "カフェ ホームページ作成",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "カフェ ホームページ作成"
+   ]
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "美容室",
+   "query": "美容室 ホームページ作成",
+   "hit": true,
+   "intent": [
+    "美容室 ホームページ作成 無料"
+   ],
+   "suggestions": [
+    "美容室 ホームページ作成",
+    "美容室 ホームページ作成 無料"
+   ]
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "ネイルサロン",
+   "query": "ネイルサロン ホームページ作成",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "ネイルサロン ホームページ作成"
+   ]
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "エステ",
+   "query": "エステ ホームページ作成",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "整体",
+   "query": "整体 ホームページ作成",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "整体 ホームページ作成"
+   ]
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "歯科",
+   "query": "歯科 ホームページ作成",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "歯科 ホームページ作成"
+   ]
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "クリニック",
+   "query": "クリニック ホームページ作成",
+   "hit": true,
+   "intent": [
+    "クリニック ホームページ作成 無料",
+    "クリニック ホームページ作成 費用"
+   ],
+   "suggestions": [
+    "クリニック ホームページ作成",
+    "クリニック ホームページ作成 無料",
+    "クリニック ホームページ作成 費用"
+   ]
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "小売店",
+   "query": "小売店 ホームページ作成",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "アパレル",
+   "query": "アパレル ホームページ作成",
+   "hit": false,
+   "intent": [],
+   "suggestions": [
+    "ホームページ作成 アパレル"
+   ]
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "学習塾",
+   "query": "学習塾 ホームページ作成",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "学習塾 ホームページ作成"
+   ]
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "ジム",
+   "query": "ジム ホームページ作成",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "不動産",
+   "query": "不動産 ホームページ作成",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "建設業",
+   "query": "建設業 ホームページ作成",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "税理士",
+   "query": "税理士 ホームページ作成",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "税理士 ホームページ作成"
+   ]
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "介護",
+   "query": "介護 ホームページ作成",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "介護 ホームページ作成"
+   ]
+  },
+  {
+   "product": "ホームページ作成",
+   "industry": "ホテル",
+   "query": "ホテル ホームページ作成",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "ホテル ホームページ作成"
+   ]
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "飲食店",
+   "query": "飲食店 勤怠管理",
+   "hit": true,
+   "intent": [
+    "勤怠管理 飲食店 無料"
+   ],
+   "suggestions": [
+    "飲食店 勤怠管理",
+    "飲食店 勤怠管理システム",
+    "飲食店 勤怠管理アプリ",
+    "勤怠管理 飲食店 無料"
+   ]
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "居酒屋",
+   "query": "居酒屋 勤怠管理",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "カフェ",
+   "query": "カフェ 勤怠管理",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "美容室",
+   "query": "美容室 勤怠管理",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "美容室 勤怠管理"
+   ]
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "ネイルサロン",
+   "query": "ネイルサロン 勤怠管理",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "エステ",
+   "query": "エステ 勤怠管理",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "整体",
+   "query": "整体 勤怠管理",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "歯科",
+   "query": "歯科 勤怠管理",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "歯科 勤怠管理",
+    "勤怠管理システム 歯科"
+   ]
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "クリニック",
+   "query": "クリニック 勤怠管理",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "クリニック 勤怠管理",
+    "クリニック 勤怠管理システム"
+   ]
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "小売店",
+   "query": "小売店 勤怠管理",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "アパレル",
+   "query": "アパレル 勤怠管理",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "学習塾",
+   "query": "学習塾 勤怠管理",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "ジム",
+   "query": "ジム 勤怠管理",
+   "hit": false,
+   "intent": [],
+   "suggestions": [
+    "事務 勤怠管理とは",
+    "事務 勤怠管理"
+   ]
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "不動産",
+   "query": "不動産 勤怠管理",
+   "hit": false,
+   "intent": [],
+   "suggestions": []
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "建設業",
+   "query": "建設業 勤怠管理",
+   "hit": true,
+   "intent": [
+    "建設業 勤怠管理アプリ 無料"
+   ],
+   "suggestions": [
+    "建設業 勤怠管理",
+    "建設業 勤怠管理 アプリ",
+    "建設業 勤怠管理システム",
+    "建設業 勤怠管理 事例",
+    "建設業 勤怠管理アプリ 無料"
+   ]
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "税理士",
+   "query": "税理士 勤怠管理",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "税理士 勤怠管理"
+   ]
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "介護",
+   "query": "介護 勤怠管理",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "介護 勤怠管理システム",
+    "介護 勤怠管理",
+    "勤怠管理 アプリ 介護"
+   ]
+  },
+  {
+   "product": "勤怠管理",
+   "industry": "ホテル",
+   "query": "ホテル 勤怠管理",
+   "hit": true,
+   "intent": [],
+   "suggestions": [
+    "ホテル 勤怠管理",
+    "ホテル 勤怠管理システム"
+   ]
+  }
+ ]
+}

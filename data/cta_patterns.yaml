@@ -1,0 +1,15 @@
+# 案件ID → CTAボタンの同期パターン（WordPress の wp_block の投稿ID）の対応表
+#
+# 正本の {{CTA:案件ID}} を、publish_prep.py がこの表で同期パターンの参照に置き換える
+# （設計書 §2 P4b・§8 T5）。対応がない案件IDはエラーになる。
+#
+# pattern_id … WordPress 管理画面「パターン」→ 該当パターンを開いたときの URL の post=数字
+# name       … 人が読むための名前（任意）
+#
+# 案件が終了・変更されたら、WordPress 側の同期パターン1か所を直す（全記事に反映される）。
+# 案件IDそのものを変えるときは、ここと正本の両方を直す。
+
+patterns:
+  prog_example_001:          # 記入例。実データを入れたら削除する
+    pattern_id: 99999
+    name: （例）X社 CTAボタン

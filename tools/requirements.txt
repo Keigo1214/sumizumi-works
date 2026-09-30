@@ -1,0 +1,29 @@
+# Phase 0-D 運用自動化スクリプトの依存関係
+# インストール: pip install -r tools/requirements.txt
+# Python 3.10 以上で検証。
+
+# --- 全スクリプト共通 ---
+PyYAML>=6.0
+python-dotenv>=1.0.0
+
+# --- factcheck.py / price_diff.py（HTTP取得とHTMLパース） ---
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0            # bs4 の高速パーサ。無い場合は html.parser にフォールバックする
+soupsieve>=2.4         # bs4 のCSSセレクタ（bs4の依存として入るが明示しておく）
+
+# --- publish_prep.py（Markdown → HTML） ---
+# 追加の理由: 正本（Markdown）から WordPress に渡す HTML を作るため。表（GFM の table）を
+# 正しく変換できること、CommonMark 準拠で変換結果が予測しやすいことから選んだ（README §11.3）。
+# lint も同じ markdown-it のトークンで行の役割（表・見出し・リスト・コードブロック）を判定する。
+markdown-it-py>=3.0.0
+
+# --- テスト（tools/tests/。運用には不要） ---
+pytest>=7.0
+
+# --- cannibalization.py / weekly_report.py（Google API） ---
+google-api-python-client>=2.100.0
+google-auth>=2.23.0
+google-auth-oauthlib>=1.1.0
+google-auth-httplib2>=0.1.1
+google-analytics-data>=0.18.0

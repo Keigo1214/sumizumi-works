@@ -1,0 +1,49 @@
+# tools/watch_targets.example.yaml
+#
+# price_diff.py の監視対象リスト。
+# これをコピーして tools/watch_targets.yaml を作り、実際の掲載企業の料金ページを登録する。
+#   PowerShell: Copy-Item tools\watch_targets.example.yaml tools\watch_targets.yaml
+#
+# 登録の考え方:
+#   * 記事に料金を載せた企業は必ず登録する（載せた瞬間に鮮度維持義務が発生する）
+#   * URLは料金ページのcanonical URLを使う。動的パラメータ付きURLは避ける
+#   * selector を指定できるなら必ず指定する。ページ全文監視は誤検知が桁違いに増える
+#     セレクタの調べ方: ブラウザで料金表を右クリック → 検証 → 該当要素で
+#     右クリック → Copy → Copy selector
+
+defaults:
+  # 全対象に追加で適用する除外フィルタ。
+  # 共通のものは config.yaml の price_diff.ignore_patterns 側に書く。
+  ignore_patterns:
+    # 「キャンペーン終了まであと〇日」のようなカウントダウン
+    - '(?i)あと\s*\d+\s*日'
+    # 汎用のトラッキングID
+    - '(?i)\b[A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12}\b'
+
+targets:
+  # ---- 記入例1: セレクタ指定あり（推奨） ----
+  - id: example-saas-pricing          # 英数字・ハイフン・アンダースコアのみ。スナップショットのファイル名になる
+    name: Example SaaS 料金ページ
+    url: https://example.com/pricing
+    selector: "main .pricing-table"   # この範囲だけを監視する
+    enabled: true
+    notes: "記事 articles/example-hikaku.md に掲載。スタンダードプランの月額のみ使用"
+
+  # ---- 記入例2: ページ全文監視 + 個別の除外フィルタ ----
+  - id: example-vendor-plan
+    name: Example Vendor プラン一覧
+    url: https://vendor.example.jp/plan/
+    # selector を省略するとページ全文が対象になる。ヘッダ・フッタ・お知らせ枠の
+    # 変更でも差分が出るため、除外フィルタで潰す。
+    enabled: true
+    ignore_patterns:
+      - '(?i)お知らせ.*'
+      - '(?i)導入企業数\s*[\d,]+\s*社'   # 常に増える数字。料金とは無関係
+    notes: "料金表が画像でなくHTMLであることを確認済み"
+
+  # ---- 記入例3: 一時的に停止したい対象 ----
+  - id: example-old-vendor
+    name: 旧ベンダー（記事から削除済み）
+    url: https://old.example.net/price
+    enabled: false
+    notes: "2026-08 に記事から削除。スナップショットは履歴として残す"

@@ -1,0 +1,2 @@
+program_id,asp,advertiser,program_name,tracking_domains,status,note
+prog_example_001,（例）A8.net,（例）X株式会社,（例）X社 勤怠管理,www17.a8.net,記入例,記入例の行。実データを入れたら削除する。tracking_domains は計測用の画像タグ（<img>）のドメイン。複数なら | で区切る

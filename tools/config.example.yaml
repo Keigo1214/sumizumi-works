@@ -1,0 +1,297 @@
+# tools/config.example.yaml
+#
+# これをコピーして tools/config.yaml を作る:
+#   cp tools/config.example.yaml tools/config.yaml   (PowerShell: Copy-Item)
+#
+# 認証情報（APIキー・トークン・サイトURL等）はここに書かない。
+# 環境変数または tools/.env に置く（tools/.env.example を参照）。
+
+# --------------------------------------------------------------------------
+# HTTP 取得の共通設定（factcheck.py / price_diff.py が使う）
+# --------------------------------------------------------------------------
+fetch:
+  # 必須。誰がアクセスしているか分かる形にすること。連絡先URLを含めるのが礼儀。
+  # サイト公開前は自分のメールアドレスでも可。
+  user_agent: "AffiliateSiteBot/1.0 (+https://example.com/about; contact@example.com)"
+
+  # 同一ホストへの最短リクエスト間隔（秒）。robots.txt に Crawl-delay があれば
+  # 大きい方を採用する。3秒未満にしないこと。
+  min_interval_sec: 3.0
+
+  timeout_sec: 20.0
+  max_retries: 2
+
+  # robots.txt を尊重するか。原則 true のまま変えない。
+  respect_robots: true
+
+  # 1ページあたりの最大取得バイト数（巨大ページで詰まらないための保険）
+  max_bytes: 5000000
+
+# --------------------------------------------------------------------------
+# factcheck.py
+# --------------------------------------------------------------------------
+factcheck:
+  # 記事側とページ側の数値の相対許容誤差。0 = 完全一致。
+  # 「約2,000円」のような丸め表記を許すなら 0.02 (=2%) 程度にする。
+  # ただし料金の照合では 0 のままを推奨（丸めた数値は記事側を直すべき）。
+  rel_tolerance: 0.0
+
+  # true にすると単位が取れない数値を一致とみなさない。誤検知は減るが見逃しが増える。
+  strict_units: false
+
+  # 出典URLがリダイレクトしていたら報告する
+  warn_on_redirect: true
+
+  # 照合対象から外す数値の正規表現（記事側の表記に対してマッチ）
+  # lint（--lint）でも同じものを「出典が要らない数値」として扱う。
+  ignore_patterns:
+    - '^0[0-9]{1,3}-[0-9]{2,4}-[0-9]{4}$'   # 電話番号
+    - '^\d{3}-\d{4}$'                        # 郵便番号
+    - '^[0-9]+(?:\.[0-9]+){2,}$'             # バージョン番号 1.2.3
+    - '^\d{1,2}月$'                          # 読者向けの「2026年9月時点」の「9月」（設計書 §8 T3）
+
+  # 手動確認の記録（data/sources/{slug}.md。設計書 §8 T2）
+  manual_check_valid_days: 90               # 有効期限（日）。§1-5 条件3と揃える
+  # 記録を有効にする確認者の名前（完全一致）。**既定は空 = どの記録も無効**。
+  # 実行者が自分の名前（記録の「確認者」の列に書く名前）をここに入れる。種類「不一致」の記録はこの名前だけ書ける
+  manual_check_allowed_checkers: []
+  # 種類「偶然の一致」の記録を書ける確認者（別セッションのファクトチェック。設計書 §6・§8 T2）
+  manual_check_session_checkers: ['factcheck_session']
+  # この語を**語として**含む確認者は、許可リストにあっても無効（人が確認した記録に限るため）。
+  # 2文字以下の語（AI）は大文字小文字を区別する（「Ai」という名前の人は拒否しない）。それ以外は区別しない
+  manual_check_denied_checkers: ['Claude', 'AI', 'GPT', 'ChatGPT', 'Gemini', 'Copilot', 'bot']
+
+  # 偶然の一致への対策（設計書 §8 T7）。一致した数値のうち、次に当たるものは出典ページ側の前後の文脈をレポートに出す。
+  # 公開前の関門（factcheck.py --mode gate。既定）では候補があれば終了コード1、週次の照合（--mode weekly）では報告だけ。
+  # 確かめた組は、手動確認の記録（T2）に種類「偶然の一致」・ページのハッシュつきで書くと、ページの本文が変わるまで出なくなる。
+  #   * 0〜max_small_value の数値 / 単位のない数値（unitless）
+  #   * 記事側に単位があるのに、出典側の一致した数値に単位がない（型番・電話番号などとの一致）
+  #   * 修飾語（約・最大・最低・以上・以下・未満・超・〜）の食い違い（「から」「~」は「〜」と同じとみなす）
+  # 「1人あたり」「1施設あたり」の 1 は対象外（lint の per_unit_suffixes と同じ規則）
+  coincidence:
+    enabled: true
+    max_small_value: 9
+    unitless: true
+    context_chars: 40           # 出典ページ側の文脈の文字数（前後それぞれ）
+    max_contexts: 3             # 1つの数値について出す文脈の数
+
+  # lint モード（factcheck.py --lint。設計書 §8 T1）。規則は README §3.6
+  lint:
+    # 「1人あたり」「1施設あたり」の 1 を、出典が必要な数値として数えない
+    # （数値の直後に助数詞0〜2文字、その直後がこれらの語の場合だけ）
+    drop_per_unit_one: true
+    per_unit_suffixes: ['あたり', '当たり']
+    # title・description と見出しの「数え上げの数」の書き方。名前付きグループ n に数、
+    # noun に名詞（あれば title と見出しで名詞も一致させる）。同じ位置では上のパターンが優先。
+    # これ以外の数はすべて「事実の数値」として、単位まで本文の出典つき数値と一致するかを確かめる。
+    enumeration_patterns:
+      - '(?P<n>\d+)\s*つの\s*(?P<noun>[一-龥ァ-ヶーA-Za-z]+)'   # 3つの要件
+      - '(?P<n>\d+)\s*つ'
+      - '(?P<n>\d+)\s*選'                                       # 5選
+      - '(?P<n>\d+)\s*(?:項目|ステップ|問|か条|カ条|ヶ条)'
+      - '(?P<n>\d+)\s*社(?:を|の)?(?:徹底)?比較'                 # 5社を比較
+    # 見出しの nofact で許す序数（「ポイント1」など）。見出しの nofact は、見出しの数値が
+    # すべて enumeration_patterns かこれに当たる場合だけ許す
+    # 番号の後ろに単位がなく、区切り（：．、）」や行末）が続くものだけ（「ポイント1,000円分」は順番ではない）
+    heading_ordinal_patterns:
+      - 'ポイント\s*(?P<n>\d+)(?![\d,.]*\d)(?=\s*(?:[:：.．、(（)）」]|$))'
+    # 見出し以外で nofact を置ける行の書き出し（NFKC で比べるので全角・半角のコロンはどちらでもよい）。
+    # 「計算式：」の行では、単位付きの数値はエラー（単位のない定数だけ書ける）
+    nofact_line_prefixes: ['試算の条件：', '計算式：']
+    # 「試算の条件：」の行に書ける単位（人数・期間・回数だけ）。円・社・%・割などはエラー
+    nofact_condition_units: ['人', '名', 'か月', 'ヶ月', 'カ月', '月', '回', '年', '日', '時間']
+    # 試算表（calc-block）のデータのセルに書ける単位（セルは「数値＋単位」か「試算の対象外（理由）」だけ）
+    calc_cell_units: ['円', '人', '名', '件', '%', '時間', '日', 'か月', 'ヶ月', 'カ月', '年', '回', '社', '倍']
+    # calc-block の前の「入力値の表」と「計算式：」の間に挟んでよい、数値のない注記行の数
+    calc_basis_max_note_lines: 2
+    # 型Bの正本に必須の、部分の目印（<!-- part: 名前 --> 〜 <!-- /part -->）。similarity.parts と揃える
+    parts: ['trace', 'checklist', 'faq']
+    # 型A・型Bとも必須の目印（関連記事の区間。中身は内部リンクの一覧だけ。ハッシュの対象外）
+    required_parts_all: ['related']
+    trace_min_rows: 3                        # 要件トレース表の最低行数（§4 合格ライン）
+    faq_min_questions: 3                     # part: faq の質問の数（「Q.」で始まる行か、？で終わる見出し）
+    checklist_min_items: 2                   # part: checklist の項目の数（リスト）
+    # 型Bの推薦は最大2つ（§1-10）。この語を含む見出しの直下の見出しが多すぎればエラー
+    recommend_heading_patterns: ['おすすめ']
+    max_recommendations: 2
+    # 漢数字＋単位・助数詞はエラー（§1-2「算用数字で書く」）。助数詞の一覧と、除外する言い回し
+    # （漢数字の位置から当たる正規表現。例: 十分・一部）は、未指定なら tools/article.py の既定値
+    # （DEFAULT_KANJI_COUNTERS / DEFAULT_KANJI_EXCLUSIONS）を使う。変えるときだけ書く:
+    # kanji_counters: ['円', '社', '人', ...]
+    # kanji_exclusions: ['十分', '一部', '一度', ...]
+    # 禁止表現（エラー。§1-6）。title・description・本文。NFKC・大文字小文字を区別しない正規表現
+    banned_expressions:
+      - 'No\.?\s*1(?!\d)'
+      - 'ナンバー\s*ワン'
+      - '(?<![\d.])1\s*位'
+      - '第\s*1\s*位'
+      - '一位'
+      - '最安'
+      - '業界\s*唯一'
+      - '一番\s*おすすめ'
+      - 'いちばん\s*おすすめ'
+      - '実際に使ってみ'
+      - '使ってみた'
+      - '試してみた'
+      - '試したところ'
+      - '導入して感じ'
+    # 注意する表現（警告。§1-6 断定・保証）
+    caution_expressions: ['必ず', '絶対', '確実に', '他社より安']
+    # 比較優位の表現。同じ行に comparison_condition_word がなければ警告（§1-6 比較の条件を同じ文に書く）
+    comparison_expressions: ['最も\s*(?:低|安|高|多|少|早|速|長|短)']
+    comparison_condition_word: '条件'
+
+# --------------------------------------------------------------------------
+# ディレクトリ・ファイル（相対パスは tools/ から見た位置）
+# --------------------------------------------------------------------------
+paths:
+  articles_dir: ../articles
+  data_dir: ../data
+  sources_dir: ../data/sources       # 手動確認の記録（T2）
+  build_dir: ../build                # publish_prep.py の出力先
+  asp_programs_file: ../data/asp-programs.csv   # 案件の一覧（lint が programs を、postcheck が計測タグを確かめる）
+  terms_file: ../data/terms.yaml     # 決まった言い回し（「36協定」など。中の数字を数値として扱わない）
+  checks_dir: ../data/checks         # 照合の合格の受領ファイル（factcheck.py が書き、publish_prep.py が読む）
+
+# 自サイトのドメイン（関連記事の区間で、絶対URLのリンクを許すドメイン。相対パス /slug/ はいつでも可）
+site_domains: []
+
+# --------------------------------------------------------------------------
+# 既知のアフィリエイト（ASP）のリンクのドメイン。
+# publish_prep.py と postcheck.py が、rel="sponsored" も nofollow もないリンクを報告する。
+# サブドメインも含めて一致させる（例: a8.net は px.a8.net にも当たる）。
+# **推定の初期値**。提携したASPのリンクコードの実際のドメインを確かめて直すこと。
+# --------------------------------------------------------------------------
+affiliate_domains:
+  - a8.net
+  - af.moshimo.com
+  - ck.jp.ap.valuecommerce.com
+  - h.accesstrade.net
+  - t.afi-b.com
+  - t.felmat.net
+  - click.j-a-net.jp
+  - rentracks.jp
+
+# --------------------------------------------------------------------------
+# publish_prep.py（設計書 §8 T5・T8）
+# --------------------------------------------------------------------------
+publish_prep:
+  cta_patterns_file: ../data/cta_patterns.yaml
+  # {{CTA:案件ID}} を置き換える文字列。{pattern_id} に同期パターン（wp_block）のIDが入る。
+  # 既定は WordPress のブロックエディタが同期パターンを参照する書き方（反映方式の確認前。README 参照）
+  cta_template: '<!-- wp:block {{"ref":{pattern_id}}} /-->'
+  # 本文のHTMLを「カスタムHTML」ブロック（<!-- wp:html -->）で包む（既定: true）。
+  # 包まないと、ブロックエディタが読み込み時にクラシックブロックとして自動整形し、保存で本文が変わりうる。
+  # また WordPress は本文にブロックの区切りが1つもないときだけ表示時に wpautop をかけるため、
+  # CTA の有無で表示が変わる。包めば、エディタでも表示でもHTMLがそのまま使われる（2026-09-30 追加）
+  wrap_html_blocks: true
+  # P7（参考資料・更新履歴）の見出し。正本にこれらで始まる見出しがあればエラー（自動生成と重複するため）
+  p7_heading: '参考資料・更新履歴'
+  references_heading: '参考資料'
+  history_heading: '更新・訂正履歴'
+  # 参考資料のURLを、既定では文字として出す（text）。記事の front matter に p7_links: link と
+  # 書いたときだけリンクにする（掲載ルールで広告主サイトへの直接リンクが禁止の案件があるため、安全側が既定）
+  reference_link_mode: text
+  # 書き出す前に必須の品質ゲートの証跡（front matter の checks）。result: pass・date・hash（今の正本のハッシュ）が必要
+  # （lint は publish_prep が自分で実行し、照合は受領ファイル data/checks/{slug}.json で確かめるので、ここには入れない）
+  required_checks: ['factcheck_session', 'owner_review']
+  required_checks_type_b: ['trace_table']
+
+# --------------------------------------------------------------------------
+# similarity.py（設計書 §8 T4）
+# --------------------------------------------------------------------------
+similarity:
+  industries_file: ../data/industries.csv
+  # 業種名を置き換える記号（業種名の違いだけで「違う記事」に見えないようにする）
+  mask_token: '〓業種〓'
+  metric: jaccard          # jaccard（文字n-gramの集合） / cosine（文字n-gramの出現回数）
+  ngram: 3
+  # **暫定値**。設計書 §0・§4 のとおり、最初の型B記事10本の結果を見て決め直す。
+  threshold: 0.5
+  # 比べる部分の目印の名前（<!-- part: 名前 --> 〜 <!-- /part -->）。lint の parts と揃える
+  parts: ['trace', 'checklist', 'faq']
+
+# --------------------------------------------------------------------------
+# postcheck.py（設計書 §8 T6）
+# --------------------------------------------------------------------------
+postcheck:
+  # 公開ページのうち本文の範囲（CSSセレクタ）。Cocoon の本文は .entry-content の想定（未確認）。
+  content_selector: '.entry-content'
+  # 数値の比較から除く要素（広告表示・目次・CTAの同期パターン）。CTA の同期パターンは、
+  # グループブロックに cta クラスを付けて作る想定（未確認。README §11.3）
+  exclude_selectors: ['.ad-disclosure', '#toc', '.toc', '.cta']
+  # CTA の同期パターンの外側のクラス。中の数値はすべてエラー、中身はボタン（リンク）と計測用の画像タグだけ（設計書 §2 P4b）
+  cta_selector: '.cta'
+  # 広告表示の要素のクラス（docs/legal/ad-disclosure.md §4）
+  ad_disclosure_selector: '.ad-disclosure'
+  ad_disclosure_text: '広告'
+  # 公開ページの数値の単位が正本と同じであることまで求める
+  strict_units: true
+
+# --------------------------------------------------------------------------
+# price_diff.py
+# --------------------------------------------------------------------------
+price_diff:
+  targets_file: watch_targets.yaml
+  snapshot_dir: snapshots
+  diff_context_lines: 2
+
+  # 全対象に共通で適用する除外フィルタ（動的要素の誤検知対策）。
+  # 対象ごとの追加フィルタは watch_targets.yaml 側に書く。
+  ignore_patterns:
+    # 日付（2026年7月20日 / 2026-07-20 / 2026/07/20）
+    - '\d{4}\s*[-/年]\s*\d{1,2}\s*[-/月]\s*\d{1,2}\s*日?'
+    # 時刻
+    - '\d{1,2}:\d{2}(:\d{2})?'
+    # 「〇分前に更新」「残り〇日」などの相対表現
+    - '[\d,]+\s*(分|時間|日)\s*(前|以内|限り)'
+    # セッションID・キャッシュバスター・トラッキングパラメータ
+    - '(?i)(session[_-]?id|csrf[_-]?token|nonce|_ga|utm_[a-z]+)\s*[=:]\s*[A-Za-z0-9_.-]+'
+    # 閲覧数・レビュー件数など常に動く数字（必要に応じて調整）
+    # 桁区切りを含めて丸ごと消すため [\d,]+ にする。\d+ だと "9,102" が "9," と
+    # "102" に分かれ、マスク後も "9," が残って毎回差分が出る。
+    - '(?i)[\d,]+\s*(人が閲覧|views?|件のレビュー|件のクチコミ)'
+
+# --------------------------------------------------------------------------
+# cannibalization.py
+# --------------------------------------------------------------------------
+cannibalization:
+  # クエリ合計の表示回数がこれ未満なら無視（小さすぎるKWのノイズを落とす）
+  min_impressions: 20
+  # 個別URLの表示回数がこれ未満なら、そのURLはカニバリ判定に含めない
+  min_page_impressions: 3
+  # 最高順位がこれより悪いクエリは無視（まだ順位以前の問題）
+  max_position: 50
+  max_rows: 100000
+  # 除外したいURLの部分文字列（タグページ・カテゴリページなど）
+  exclude_paths:
+    - "/tag/"
+    - "/category/"
+    - "/page/"
+    - "?"
+
+# --------------------------------------------------------------------------
+# weekly_report.py
+# --------------------------------------------------------------------------
+weekly_report:
+  output_dir: reports
+  # Search Console のデータ確定までの日数。既定は3日前を集計終端にする。
+  data_lag_days: 3
+
+# --------------------------------------------------------------------------
+# Search Console / GA4
+# 実値は環境変数（GSC_SITE_URL / GA4_PROPERTY_ID）で渡すのが基本。
+# ここに書いた値は環境変数が無いときのフォールバックとして使われる。
+# --------------------------------------------------------------------------
+search_console:
+  site_url: ""      # 例: "sc-domain:example.com" または "https://example.com/"
+
+ga4:
+  property_id: ""   # 例: "123456789"（数字のみ）
+
+# --------------------------------------------------------------------------
+# 通知（任意）
+# --------------------------------------------------------------------------
+notify:
+  # webhook の URL 自体はここに書かない。環境変数名だけを指定する。
+  webhook_url_env: PRICE_DIFF_WEBHOOK_URL

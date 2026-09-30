@@ -1,0 +1,2 @@
+keyword,slug,type,registered,note
+（例）歯科医院 勤怠管理,example-dental-clinic-attendance-system,B,2026-09-27,記入例の行。実データを入れたら削除する。keyword は一意（同じキーワードで2本目を作らない）

@@ -1,0 +1,23 @@
+# 認証情報・実設定（絶対にコミットしない）
+.env
+config.yaml
+watch_targets.yaml
+.gsc_token.json
+*token*.json
+client_secret*.json
+*.pem
+*.key
+
+# 生成物
+reports/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# スナップショットはGit管理する（料金の変遷が履歴として残る）ので除外しない。
+# 除外したい場合は下記のコメントを外す。
+# snapshots/
+
+# テスト
+.pytest_cache/

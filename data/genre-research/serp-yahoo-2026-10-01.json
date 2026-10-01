@@ -1,0 +1,21 @@
+{
+ "source": "Yahoo! JAPAN 検索（search.yahoo.co.jp）の1ページ目。自然検索（.Algo の枠）の上位9件のホスト名と見出し、広告の見出しの数。ログインなしのアプリ内ブラウザから、40秒以上の間隔で取得",
+ "fetched_at": "2026-10-01",
+ "purpose": "docs/phase0.5-provisional-genre.md §7-4 の条件3。検索語は criteria-2026-10-01.json で結果を見る前に引いたもの",
+ "big_media_definition": "aspicjapan.org, it-trend.jp, boxil.jp, itreview.jp, my-best.com, bizcan.jp, meetsmore.com, business.aumo.jp, liskul.com, hrnote.jp, itmedia.co.jp, cone-c-slide.com, diamond.jp, minkabu.jp, catalog.monex.co.jp（§2-2 の定義）",
+ "results": [
+  {"q": "税理士 バーチャルオフィス", "ads": 8, "big_media": 0, "org": ["mf.workstyling.jp", "altbase.co.jp", "crosscoop.com", "office.yield-marketing.co.jp", "kaisha-setsuritsu.co.jp", "virtualoffice1.jp", "servcorp.co.jp", "yorozu-ac.com", "executivecentre.com"], "note": "上位のほぼすべてが「税理士はバーチャルオフィスで開業できるか」（登録要件）"},
+  {"q": "コンサル バーチャルオフィス", "ads": 8, "big_media": 0, "org": ["united-office.com", "timerich-ginza.tokyo", "executivecentre.com", "timewell.jp", "karigo.net", "carearc.co.jp", "nawabari.net", "recruit.azsa.or.jp"]},
+  {"q": "デザイナー バーチャルオフィス", "ads": 8, "big_media": 0, "org": ["gather.town", "1sbc.com", "virtualoffice.dmm.com", "office-zero1.net", "xdesigner.jp", "note.com", "10banoffice.jp", "xn--dckn0c3a4e6a4gwc5hz256bzg3a.jp"]},
+  {"q": "行政書士 バーチャルオフィス", "ads": 8, "big_media": 0, "org": ["karigo.net", "thehub.nex.works", "mf.workstyling.jp", "servcorp.co.jp", "1sbc.com", "crosscoop.com", "vo-metsoffice.jp", "executivecentre.com", "virtualoffice-resonance.jp"], "note": "上位のほぼすべてが「行政書士はバーチャルオフィスで開業できるか」（事務所要件）"},
+  {"q": "古物商 バーチャルオフィス", "ads": 8, "big_media": 0, "org": ["k-society.com", "virtualoffice1.jp", "nawabari.net", "ginza-plus.net", "cgh.works", "kobutusho-kyoka.com", "kigyo.gmo", "recycle-hajimeru.net", "kyokanabi.com"], "note": "上位のほぼすべてが「古物商許可はバーチャルオフィスで取れるか」（営業所要件）"},
+  {"q": "特商法 バーチャルオフィス", "ads": 8, "big_media": 0, "org": ["1sbc.com", "virtualoffice1.jp", "no-trouble.caa.go.jp", "virtualoffice-resonance.jp", "vo-metsoffice.jp", "gmo-office.com", "cgh.works", "office-tokyo.com", "office-zero1.net"], "note": "消費者庁の特定商取引法ガイド（Q&A）が3位"},
+  {"q": "不動産 POSレジ", "ads": 7, "big_media": 1, "org": ["usen.com", "it-trend.jp", "visipri.com", "hands-inc.co.jp", "smbc-gp.co.jp", "onamae.com", "squareup.com", "jsite.mhlw.go.jp", "ebisumart.com"]},
+  {"q": "カフェ POSレジ", "ads": 8, "big_media": 0, "org": ["postas.co.jp", "squareup.com", "smaregi.jp", "usen.com", "stores.fun", "dinii.jp", "ja.komoju.com", "airregi.jp", "tenpos.com"]},
+  {"q": "ジム POSレジ", "ads": 8, "big_media": 1, "org": ["smaregi.jp", "bizcan.jp", "squareup.com", "gyms.jp", "aiony.jp", "rejichoice.jp", "bionly.jp", "stores.fun", "alpha-note.co.jp"]},
+  {"q": "ホテル POSレジ", "ads": 6, "big_media": 1, "org": ["smaregi.jp", "dyn.co.jp", "squareup.com", "cashier-pos.com", "busicom.co.jp", "aipass.jp", "meetsmore.com", "orange-pos.jp", "miyako.com"]},
+  {"q": "アパレル POSレジ", "ads": 8, "big_media": 3, "org": ["meetsmore.com", "business.aumo.jp", "postas.co.jp", "smaregi.jp", "cashier-pos.com", "catalog.monex.co.jp", "busicom.co.jp", "usen.com", "squareup.com"]},
+  {"q": "ネイルサロン POSレジ", "ads": 8, "big_media": 2, "org": ["orend.jp", "airregi.jp", "smaregi.jp", "business.aumo.jp", "squareup.com", "store-store.jp", "rsvia.co.jp", "store.cloudil.jp", "bizcan.jp"]}
+ ],
+ "summary": {"A_POS_avg_big_media": 1.33, "B_VO_avg_big_media": 0.0}
+}

@@ -1,0 +1,42 @@
+{
+  "purpose": "Phase 0.5 の最初の10記事（型A）のキーワード選び（HANDOFF §2 の6 の②）。データを見る前に、候補の商材と選び方をここで固定する（HANDOFF §5 の学び）。このファイルは取得の前にコミットする",
+  "fixed_at": "2026-10-02",
+  "scope_source": "docs/phase0.5-provisional-genre.md §4（決済の単独の比較はしない／保険診療の業種は除く／税は公式の事実だけ）",
+  "candidates": [
+    {"seed": "POSレジ", "group": "pos", "family": "pos"},
+    {"seed": "レジアプリ", "group": "pos", "family": "pos"},
+    {"seed": "セルフレジ", "group": "self-checkout", "family": "pos"},
+    {"seed": "自動釣銭機", "group": "change-machine", "family": "pos"},
+    {"seed": "券売機", "group": "ticket-machine", "family": "pos"},
+    {"seed": "モバイルオーダー", "group": "mobile-order", "family": "pos"},
+    {"seed": "セルフオーダー", "group": "table-order", "family": "pos"},
+    {"seed": "テーブルオーダー", "group": "table-order", "family": "pos"},
+    {"seed": "オーダーエントリーシステム", "group": "order-entry", "family": "pos"},
+    {"seed": "在庫管理アプリ", "group": "inventory", "family": "pos"},
+    {"seed": "予約システム", "group": "reservation", "family": "adjacent"},
+    {"seed": "顧客管理アプリ", "group": "crm", "family": "adjacent"},
+    {"seed": "ホームページ作成", "group": "website", "family": "adjacent"},
+    {"seed": "ネットショップ 作成", "group": "netshop", "family": "adjacent"},
+    {"seed": "シフト管理アプリ", "group": "shift", "family": "adjacent"},
+    {"seed": "店舗アプリ", "group": "store-app", "family": "adjacent"}
+  ],
+  "excluded_before_data": [
+    {"seed": "キャッシュレス決済／決済端末", "reason": "決済を単独で比べる記事は書かない（§4）"},
+    {"seed": "勤怠管理", "reason": "A8.net の関係のある案件が1件、本丸の語の上位は大手比較メディアが7件（§4 の採らなかった候補）"},
+    {"seed": "レセコン・電子カルテ・会計ソフト", "reason": "保険診療・税の判断に踏み込む（§4、CLAUDE.md ルール6）"}
+  ],
+  "fetch": {
+    "google_suggest": "各 seed について「{seed}」「{seed} 」（末尾に空白）「{seed} 比較」「{seed} おすすめ」「{seed} 料金」の5語の検索候補（suggest_typeA.py。1.2秒間隔）",
+    "a8": "A8.net のキーワード検索で seed ごとの該当件数と、関係のある案件（その商材そのものの申込・資料請求・相談が成果のもの）の数と名前。読むだけ"
+  },
+  "rules": {
+    "R1_scope": "scope_source の範囲の外のものは選ばない",
+    "R2_intent": "「{seed}」と「{seed} 」の検索候補に、比較・おすすめ・料金・価格・無料・費用・ランキング・安い のいずれかを含む候補が1つ以上あること。なければ選ばない（比べて選ぶ検索がされている兆しがないため）。検索ボリュームは取れていないので「未検証」と書く",
+    "R3_program": "A8.net に、その商材の関係のある案件が1件以上あること。0件のものは、R1・R2 を満たす候補が10未満のときだけ、ハブ専用の記事として残りの枠に入れてよい",
+    "R4_dedupe": "同じ group の seed は1本にまとめる（同じ製品を比べることになるため）。主キーワードは、group の中で R2 の候補が最も多い seed を使う",
+    "R5_order": "R1〜R4 を満たす group が10を超えたら、①関係のある A8.net の案件の数が多い順 ②R2 に当たる検索候補の数が多い順 ③family が pos のものを先、の順で10を選ぶ",
+    "R6_shortfall": "10に届かないときは、足りない数を報告し、埋め方（POSレジの下位の意図〔無料など〕を別の記事にするか、型B を混ぜるか）は実行者に諮る。黙って埋めない",
+    "R7_main_keyword": "主キーワードは「{seed} 比較」を基本にする。検索候補に「比較」がなく「おすすめ」だけがある group は「{seed} おすすめ」にする",
+    "R8_order_of_writing": "書く順は POSレジ（ハブ）を最初にし、あとは R5 の順"
+  }
+}

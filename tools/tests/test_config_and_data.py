@@ -67,8 +67,11 @@ def test_csv_templates(name, header):
     with (DATA_DIR / name).open(encoding="utf-8-sig", newline="") as fh:
         rows = list(csv.reader(fh))
     assert rows[0] == header
-    assert len(rows) == 2                      # 見出し＋記入例1行
-    assert "例" in ",".join(rows[1]) or "example" in ",".join(rows[1])
+    assert len(rows) >= 2                      # 見出し＋記入例1行、または実データ
+    if len(rows) > 2:                          # 実データを入れたら記入例の行は消す
+        assert not any(r and r[0].startswith("（例）") for r in rows[1:])
+    else:
+        assert "例" in ",".join(rows[1]) or "example" in ",".join(rows[1])
 
 
 def test_program_rules_has_section_1_8_columns():

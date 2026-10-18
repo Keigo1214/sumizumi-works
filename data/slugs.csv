@@ -1,2 +1,11 @@
 ja,en,kind,note
-（例）勤怠管理システム,example-attendance-system,product,記入例の行。kind は industry / product / issue のいずれか。実データを入れたら削除する
+POSレジ,pos-register,product,レジアプリも同じ商材として扱う
+ネットショップ作成サービス,online-store-builder,product,
+ホームページ作成サービス,website-builder,product,
+顧客管理アプリ,crm-app,product,
+予約システム,reservation-system,product,
+在庫管理アプリ,inventory-app,product,
+シフト管理アプリ,shift-management-app,product,
+店舗アプリ,store-app,product,
+自動釣銭機,automatic-change-machine,product,
+オーダーエントリーシステム,order-entry-system,product,

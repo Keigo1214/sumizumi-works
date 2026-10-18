@@ -1,2 +1,11 @@
 keyword,slug,type,registered,note
-（例）歯科医院 勤怠管理,example-dental-clinic-attendance-system,B,2026-09-27,記入例の行。実データを入れたら削除する。keyword は一意（同じキーワードで2本目を作らない）
+POSレジ 比較,pos-register-comparison,A,2026-10-18,Phase 0.5 の最初の10本の1本目（docs/phase0.5-first10-keywords.md。2026-10-18 実行者承認）。題名と本文で「レジアプリ」も扱う
+ネットショップ 作成 おすすめ,online-store-builder-comparison,A,2026-10-18,Phase 0.5 の最初の10本の2本目（docs/phase0.5-first10-keywords.md。2026-10-18 実行者承認）
+ホームページ作成 比較,website-builder-comparison,A,2026-10-18,Phase 0.5 の最初の10本の3本目（docs/phase0.5-first10-keywords.md。2026-10-18 実行者承認）
+顧客管理アプリ おすすめ,crm-app-comparison,A,2026-10-18,Phase 0.5 の最初の10本の4本目（docs/phase0.5-first10-keywords.md。2026-10-18 実行者承認）
+予約システム 比較,reservation-system-comparison,A,2026-10-18,Phase 0.5 の最初の10本の5本目（docs/phase0.5-first10-keywords.md。2026-10-18 実行者承認）
+在庫管理アプリ 比較,inventory-app-comparison,A,2026-10-18,Phase 0.5 の最初の10本の6本目（docs/phase0.5-first10-keywords.md。2026-10-18 実行者承認）
+シフト管理アプリ 比較,shift-management-app-comparison,A,2026-10-18,Phase 0.5 の最初の10本の7本目（docs/phase0.5-first10-keywords.md。2026-10-18 実行者承認）
+店舗アプリ 比較,store-app-comparison,A,2026-10-18,Phase 0.5 の最初の10本の8本目（docs/phase0.5-first10-keywords.md。2026-10-18 実行者承認）
+自動釣銭機 比較,automatic-change-machine-comparison,A,2026-10-18,Phase 0.5 の最初の10本の9本目（docs/phase0.5-first10-keywords.md。2026-10-18 実行者承認）
+オーダーエントリーシステム 比較,order-entry-system-comparison,A,2026-10-18,Phase 0.5 の最初の10本の10本目（docs/phase0.5-first10-keywords.md。2026-10-18 実行者承認）
